@@ -1,0 +1,51 @@
+<h1>Listing nutriologos</h1>
+
+<table>
+  <tr>
+    <th>Nombre pila</th>
+    <th>Nombre ap</th>
+    <th>Nombre am</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Fecha nacimiento</th>
+    <th>Sexo</th>
+    <th>Direccion calle</th>
+    <th>Direccion numero</th>
+    <th>Direccion colonia</th>
+    <th>Direccion cp</th>
+    <th>Direccion cuidad</th>
+    <th>Telefono</th>
+    <th>Cedula profesional</th>
+    <th>Institucion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nutriologos.each do |nutriologo| %>
+  <tr>
+    <td><%= nutriologo.nombre_pila %></td>
+    <td><%= nutriologo.nombre_ap %></td>
+    <td><%= nutriologo.nombre_am %></td>
+    <td><%= nutriologo.email %></td>
+    <td><%= nutriologo.password %></td>
+    <td><%= nutriologo.fecha_nacimiento %></td>
+    <td><%= nutriologo.sexo %></td>
+    <td><%= nutriologo.direccion_calle %></td>
+    <td><%= nutriologo.direccion_numero %></td>
+    <td><%= nutriologo.direccion_colonia %></td>
+    <td><%= nutriologo.direccion_cp %></td>
+    <td><%= nutriologo.direccion_cuidad %></td>
+    <td><%= nutriologo.telefono %></td>
+    <td><%= nutriologo.cedula_profesional %></td>
+    <td><%= nutriologo.institucion %></td>
+    <td><%= link_to 'Show', nutriologo %></td>
+    <td><%= link_to 'Edit', edit_nutriologo_path(nutriologo) %></td>
+    <td><%= link_to 'Destroy', nutriologo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nutriologo', new_nutriologo_path %>

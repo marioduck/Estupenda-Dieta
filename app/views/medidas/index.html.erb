@@ -1,0 +1,23 @@
+<h1>Listing medidas</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medidas.each do |medida| %>
+  <tr>
+    <td><%= medida.nombre %></td>
+    <td><%= link_to 'Show', medida %></td>
+    <td><%= link_to 'Edit', edit_medida_path(medida) %></td>
+    <td><%= link_to 'Destroy', medida, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medida', new_medida_path %>

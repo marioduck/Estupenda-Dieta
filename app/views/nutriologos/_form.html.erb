@@ -1,0 +1,77 @@
+<%= form_for(@nutriologo) do |f| %>
+  <% if @nutriologo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nutriologo.errors.count, "error") %> prohibited this nutriologo from being saved:</h2>
+
+      <ul>
+      <% @nutriologo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_pila %><br />
+    <%= f.text_field :nombre_pila %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_ap %><br />
+    <%= f.text_field :nombre_ap %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_am %><br />
+    <%= f.text_field :nombre_am %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_nacimiento %><br />
+    <%= f.date_select :fecha_nacimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br />
+    <%= f.text_field :sexo %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_calle %><br />
+    <%= f.text_field :direccion_calle %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_numero %><br />
+    <%= f.text_field :direccion_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_colonia %><br />
+    <%= f.text_field :direccion_colonia %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_cp %><br />
+    <%= f.text_field :direccion_cp %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion_cuidad %><br />
+    <%= f.text_field :direccion_cuidad %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :cedula_profesional %><br />
+    <%= f.text_field :cedula_profesional %>
+  </div>
+  <div class="field">
+    <%= f.label :institucion %><br />
+    <%= f.text_field :institucion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

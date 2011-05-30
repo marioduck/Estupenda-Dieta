@@ -1,0 +1,61 @@
+<h1>Listing alimentos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Calorias</th>
+    <th>Grasas saturadas</th>
+    <th>Grasas trans</th>
+    <th>Proteinas</th>
+    <th>Colesterol</th>
+    <th>Fibra</th>
+    <th>Azucares</th>
+    <th>Potasio</th>
+    <th>Carbohidratos</th>
+    <th>Fosforo</th>
+    <th>Sodio</th>
+    <th>Calcio</th>
+    <th>Hierro</th>
+    <th>Aceites</th>
+    <th>Vitamina c</th>
+    <th>Vitamina a</th>
+    <th>Cantidad</th>
+    <th>Medida</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alimentos.each do |alimento| %>
+  <tr>
+    <td><%= alimento.nombre %></td>
+    <td><%= alimento.descripcion %></td>
+    <td><%= alimento.calorias %></td>
+    <td><%= alimento.grasas_saturadas %></td>
+    <td><%= alimento.grasas_trans %></td>
+    <td><%= alimento.proteinas %></td>
+    <td><%= alimento.colesterol %></td>
+    <td><%= alimento.fibra %></td>
+    <td><%= alimento.azucares %></td>
+    <td><%= alimento.potasio %></td>
+    <td><%= alimento.carbohidratos %></td>
+    <td><%= alimento.fosforo %></td>
+    <td><%= alimento.sodio %></td>
+    <td><%= alimento.calcio %></td>
+    <td><%= alimento.hierro %></td>
+    <td><%= alimento.aceites %></td>
+    <td><%= alimento.vitamina_c %></td>
+    <td><%= alimento.vitamina_a %></td>
+    <td><%= alimento.cantidad %></td>
+    <td><%= alimento.medida %></td>
+    <td><%= link_to 'Show', alimento %></td>
+    <td><%= link_to 'Edit', edit_alimento_path(alimento) %></td>
+    <td><%= link_to 'Destroy', alimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alimento', new_alimento_path %>

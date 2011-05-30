@@ -1,0 +1,29 @@
+<h1>Listing historial_pesos</h1>
+
+<table>
+  <tr>
+    <th>Peso anterior</th>
+    <th>Peso actual</th>
+    <th>Fecha registro</th>
+    <th>Bmi</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @historial_pesos.each do |historial_peso| %>
+  <tr>
+    <td><%= historial_peso.peso_anterior %></td>
+    <td><%= historial_peso.peso_actual %></td>
+    <td><%= historial_peso.fecha_registro %></td>
+    <td><%= historial_peso.bmi %></td>
+    <td><%= link_to 'Show', historial_peso %></td>
+    <td><%= link_to 'Edit', edit_historial_peso_path(historial_peso) %></td>
+    <td><%= link_to 'Destroy', historial_peso, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Historial peso', new_historial_peso_path %>

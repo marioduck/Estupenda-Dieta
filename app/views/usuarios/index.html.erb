@@ -1,0 +1,53 @@
+<h1>Listing usuarios</h1>
+
+<table>
+  <tr>
+    <th>Nombre pila</th>
+    <th>Nombre ap</th>
+    <th>Nombre am</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Fecha nacimiento</th>
+    <th>Sexo</th>
+    <th>Direccion calle</th>
+    <th>Direccion numero</th>
+    <th>Direccion colonia</th>
+    <th>Direccion cp</th>
+    <th>Direccion cuidad</th>
+    <th>Telefono</th>
+    <th>Altura</th>
+    <th>Peso</th>
+    <th>Ingestas diarias</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @usuarios.each do |usuario| %>
+  <tr>
+    <td><%= usuario.nombre_pila %></td>
+    <td><%= usuario.nombre_ap %></td>
+    <td><%= usuario.nombre_am %></td>
+    <td><%= usuario.email %></td>
+    <td><%= usuario.password %></td>
+    <td><%= usuario.fecha_nacimiento %></td>
+    <td><%= usuario.sexo %></td>
+    <td><%= usuario.direccion_calle %></td>
+    <td><%= usuario.direccion_numero %></td>
+    <td><%= usuario.direccion_colonia %></td>
+    <td><%= usuario.direccion_cp %></td>
+    <td><%= usuario.direccion_cuidad %></td>
+    <td><%= usuario.telefono %></td>
+    <td><%= usuario.altura %></td>
+    <td><%= usuario.peso %></td>
+    <td><%= usuario.ingestas_diarias %></td>
+    <td><%= link_to 'Show', usuario %></td>
+    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Usuario', new_usuario_path %>

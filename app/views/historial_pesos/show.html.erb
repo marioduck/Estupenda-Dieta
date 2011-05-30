@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Peso anterior:</b>
+  <%= @historial_peso.peso_anterior %>
+</p>
+
+<p>
+  <b>Peso actual:</b>
+  <%= @historial_peso.peso_actual %>
+</p>
+
+<p>
+  <b>Fecha registro:</b>
+  <%= @historial_peso.fecha_registro %>
+</p>
+
+<p>
+  <b>Bmi:</b>
+  <%= @historial_peso.bmi %>
+</p>
+
+
+<%= link_to 'Edit', edit_historial_peso_path(@historial_peso) %> |
+<%= link_to 'Back', historial_pesos_path %>

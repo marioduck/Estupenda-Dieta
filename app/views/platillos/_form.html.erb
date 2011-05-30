@@ -1,0 +1,89 @@
+<%= form_for(@platillo) do |f| %>
+  <% if @platillo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@platillo.errors.count, "error") %> prohibited this platillo from being saved:</h2>
+
+      <ul>
+      <% @platillo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :calorias %><br />
+    <%= f.text_field :calorias %>
+  </div>
+  <div class="field">
+    <%= f.label :grasas_saturadas %><br />
+    <%= f.text_field :grasas_saturadas %>
+  </div>
+  <div class="field">
+    <%= f.label :grasas_trans %><br />
+    <%= f.text_field :grasas_trans %>
+  </div>
+  <div class="field">
+    <%= f.label :proteinas %><br />
+    <%= f.text_field :proteinas %>
+  </div>
+  <div class="field">
+    <%= f.label :colesterol %><br />
+    <%= f.text_field :colesterol %>
+  </div>
+  <div class="field">
+    <%= f.label :fibra %><br />
+    <%= f.text_field :fibra %>
+  </div>
+  <div class="field">
+    <%= f.label :azucares %><br />
+    <%= f.text_field :azucares %>
+  </div>
+  <div class="field">
+    <%= f.label :potasio %><br />
+    <%= f.text_field :potasio %>
+  </div>
+  <div class="field">
+    <%= f.label :carbohidratos %><br />
+    <%= f.text_field :carbohidratos %>
+  </div>
+  <div class="field">
+    <%= f.label :fosforo %><br />
+    <%= f.text_field :fosforo %>
+  </div>
+  <div class="field">
+    <%= f.label :sodio %><br />
+    <%= f.text_field :sodio %>
+  </div>
+  <div class="field">
+    <%= f.label :calcio %><br />
+    <%= f.text_field :calcio %>
+  </div>
+  <div class="field">
+    <%= f.label :hierro %><br />
+    <%= f.text_field :hierro %>
+  </div>
+  <div class="field">
+    <%= f.label :aceites %><br />
+    <%= f.text_field :aceites %>
+  </div>
+  <div class="field">
+    <%= f.label :vitamina_c %><br />
+    <%= f.text_field :vitamina_c %>
+  </div>
+  <div class="field">
+    <%= f.label :vitamina_a %><br />
+    <%= f.text_field :vitamina_a %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,30 @@
 Prueba::Application.routes.draw do
+  resources :registro_alimentos
+
+  resources :etiqueta
+
+  resources :alimentos
+
+  resources :medidas
+
+  resources :platillos
+
+  resources :menus
+
+  resources :horarios
+
+  resources :restaurants
+
+  resources :historial_pesos
+
+  resources :enfermedads
+
+  resources :plan_alimenticios
+
+  resources :usuarios
+
+  resources :nutriologos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

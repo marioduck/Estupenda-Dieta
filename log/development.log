@@ -1,0 +1,246 @@
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (117.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (73.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreatePersonas (20110529030343)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "nutriologos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_pila" varchar(255), "nombre_ap" varchar(255), "nombre_am" varchar(255), "email" varchar(255), "password" varchar(255), "fecha_nacimiento" date, "sexo" integer, "direccion_calle" varchar(255), "direccion_numero" varchar(255), "direccion_colonia" varchar(255), "direccion_cp" integer, "direccion_cuidad" varchar(255), "telefono" integer, "cedula_profesional" varchar(255), "institucion" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110529033208')
+Migrating to CreateUsuarios (20110529033223)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre_pila" varchar(255), "nombre_ap" varchar(255), "nombre_am" varchar(255), "email" varchar(255), "password" varchar(255), "fecha_nacimiento" date, "sexo" integer, "direccion_calle" varchar(255), "direccion_numero" varchar(255), "direccion_colonia" varchar(255), "direccion_cp" integer, "direccion_cuidad" varchar(255), "telefono" integer, "altura" float, "peso" float, "ingestas_diarias" integer, "plan_alimenticio_id" integer, "enfermedad_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110529033223')
+Migrating to CreatePlanAlimenticios (20110530003208)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+Migrating to CreatePlanAlimenticios (20110530003208)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "plan_alimenticios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "calorias" integer, "fibras" integer, "azucares" integer, "carbohidratos" integer, "proteinas" integer, "ingestas" integer, "plan_alimenticio_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530003208')
+Migrating to CreateEnfermedads (20110530003253)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+Migrating to CreatePlanAlimenticios (20110530003208)
+Migrating to CreateEnfermedads (20110530003253)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "enfermedads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "usuario_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530003253')
+Migrating to CreateHistorialPesos (20110530003414)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "historial_pesos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "peso_anterior" float, "peso_actual" float, "fecha_registro" date, "bmi" integer, "usuario_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530003414')
+Migrating to CreateRestaurants (20110530021135)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "email" varchar(255), "password" varchar(255), "direccion_calle" varchar(255), "direccion_numero" varchar(255), "direccion_colonia" varchar(255), "direccion_cp" integer, "direccion_cuidad" varchar(255), "direccion_estado" varchar(255), "telefono" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530021135')
+Migrating to CreateHorarios (20110530021341)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "horarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "dia" varchar(255), "apertura" varchar(255), "cierre" varchar(255), "restaurant_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530021341')
+Migrating to CreateMenus (20110530022116)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "menus" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "restaurant_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530022116')
+Migrating to CreatePlatillos (20110530024712)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "platillos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "calorias" float, "grasas_saturadas" float, "grasas_trans" float, "proteinas" float, "colesterol" float, "fibra" float, "azucares" float, "potasio" float, "carbohidratos" float, "fosforo" float, "sodio" float, "calcio" float, "hierro" float, "aceites" float, "vitamina_c" float, "vitamina_a" float, "menu_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530024712')
+Migrating to CreateMedidas (20110530024910)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "medidas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530024910')
+Migrating to CreateAlimentos (20110530035708)
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE TABLE "alimentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "calorias" float, "grasas_saturadas" float, "grasas_trans" float, "proteinas" float, "colesterol" float, "fibra" float, "azucares" float, "potasio" float, "carbohidratos" float, "fosforo" float, "sodio" float, "calcio" float, "hierro" float, "aceites" float, "vitamina_c" float, "vitamina_a" float, "cantidad" integer, "medida_id" integer, "etiqueta_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530035708')
+Migrating to CreateEtiqueta (20110530041519)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "etiqueta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "descripcion" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530041519')
+Migrating to CreateRegistroAlimentos (20110530052155)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateNutriologos (20110529033208)
+Migrating to CreateUsuarios (20110529033223)
+Migrating to CreatePlanAlimenticios (20110530003208)
+Migrating to CreateEnfermedads (20110530003253)
+Migrating to CreateHistorialPesos (20110530003414)
+Migrating to CreateRestaurants (20110530021135)
+Migrating to CreateHorarios (20110530021341)
+Migrating to CreateMenus (20110530022116)
+Migrating to CreatePlatillos (20110530024712)
+Migrating to CreateMedidas (20110530024910)
+Migrating to CreateAlimentos (20110530035708)
+Migrating to CreateEtiqueta (20110530041519)
+Migrating to CreateRegistroAlimentos (20110530052155)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "registro_alimentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario_id" integer, "alimento_id" integer, "etiqueta_id" integer, "fecha" date, "hora" time, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110530052155')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("alimentos")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("enfermedads")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("etiqueta")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("historial_pesos")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("horarios")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("medidas")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("menus")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("nutriologos")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("plan_alimenticios")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("platillos")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("registro_alimentos")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("restaurants")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("usuarios")
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Mon May 30 00:18:43 -0700 2011
+  Processing by Rails::InfoController#properties as 
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Rendered inline template (0.5ms)
+Completed 200 OK in 39ms (Views: 2.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Mon May 30 00:18:59 -0700 2011
+  Processing by Rails::InfoController#properties as 
+Rendered inline template (0.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at Mon May 30 00:21:44 -0700 2011
+  Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Rendered usuarios/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 177ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at Mon May 30 00:21:51 -0700 2011
+  Processing by UsuariosController#new as HTML
+Rendered usuarios/_form.html.erb (312.0ms)
+Rendered usuarios/new.html.erb within layouts/application (317.3ms)
+Completed 200 OK in 340ms (Views: 322.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at Mon May 30 00:30:33 -0700 2011
+  Processing by UsuariosController#new as HTML
+Rendered usuarios/_form.html.erb (203.3ms)
+Rendered usuarios/new.html.erb within layouts/application (208.7ms)
+Completed 200 OK in 231ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at Mon May 30 00:30:57 -0700 2011
+  Processing by UsuariosController#create as HTML
+  Parameters: {"commit"=>"Create Usuario", "authenticity_token"=>"KAwfLcgctB30GC/7hRMRhOkac+cSlSWCh3UyyEViwAY=", "utf8"=>"✓", "usuario"=>{"direccion_cuidad"=>"", "telefono"=>"sadfasf", "direccion_numero"=>"", "nombre_pila"=>"", "fecha_nacimiento(1i)"=>"2011", "direccion_calle"=>"", "fecha_nacimiento(2i)"=>"5", "nombre_am"=>"", "fecha_nacimiento(3i)"=>"30", "direccion_cp"=>"", "altura"=>"asdfasfd", "direccion_colonia"=>"", "peso"=>"asfd", "nombre_ap"=>"", "password"=>"[FILTERED]", "sexo"=>"", "email"=>"", "ingestas_diarias"=>"afd"}}
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "usuarios" ("nombre_ap", "sexo", "peso", "nombre_am", "direccion_cp", "plan_alimenticio_id", "direccion_colonia", "fecha_nacimiento", "altura", "direccion_calle", "enfermedad_id", "ingestas_diarias", "direccion_cuidad", "email", "nombre_pila", "direccion_numero", "telefono", "password", "created_at", "updated_at") VALUES ('', NULL, 0.0, '', NULL, NULL, '', '2011-05-30', 0.0, '', NULL, 0, '', '', '', '', 0, '', '2011-05-30 07:30:57.743165', '2011-05-30 07:30:57.743165')[0m
+Redirected to http://127.0.0.1:3000/usuarios/1
+Completed 302 Found in 179ms
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at Mon May 30 00:30:57 -0700 2011
+  Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered usuarios/show.html.erb within layouts/application (88.4ms)
+Completed 200 OK in 241ms (Views: 130.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at Mon May 30 00:31:04 -0700 2011
+  Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+Rendered usuarios/index.html.erb within layouts/application (104.6ms)
+Completed 200 OK in 124ms (Views: 109.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/usuarios/1" for 127.0.0.1 at Mon May 30 00:31:09 -0700 2011
+  Processing by UsuariosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KAwfLcgctB30GC/7hRMRhOkac+cSlSWCh3UyyEViwAY=", "id"=>"1"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = 1[0m
+Completed   in 53ms
+
+ActiveRecord::StatementInvalid (Could not find table 'enfermedads_usuarios'):
+  app/controllers/usuarios_controller.rb:76:in `destroy'
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (76.4ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.9ms)

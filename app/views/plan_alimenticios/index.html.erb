@@ -1,0 +1,37 @@
+<h1>Listing plan_alimenticios</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Calorias</th>
+    <th>Fibras</th>
+    <th>Azucares</th>
+    <th>Carbohidratos</th>
+    <th>Proteinas</th>
+    <th>Ingestas</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @plan_alimenticios.each do |plan_alimenticio| %>
+  <tr>
+    <td><%= plan_alimenticio.nombre %></td>
+    <td><%= plan_alimenticio.descripcion %></td>
+    <td><%= plan_alimenticio.calorias %></td>
+    <td><%= plan_alimenticio.fibras %></td>
+    <td><%= plan_alimenticio.azucares %></td>
+    <td><%= plan_alimenticio.carbohidratos %></td>
+    <td><%= plan_alimenticio.proteinas %></td>
+    <td><%= plan_alimenticio.ingestas %></td>
+    <td><%= link_to 'Show', plan_alimenticio %></td>
+    <td><%= link_to 'Edit', edit_plan_alimenticio_path(plan_alimenticio) %></td>
+    <td><%= link_to 'Destroy', plan_alimenticio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Plan alimenticio', new_plan_alimenticio_path %>

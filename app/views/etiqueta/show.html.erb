@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @etiquetum.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @etiquetum.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_etiquetum_path(@etiquetum) %> |
+<%= link_to 'Back', etiqueta_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @registro_alimento.usuario %>
+</p>
+
+<p>
+  <b>Alimento:</b>
+  <%= @registro_alimento.alimento %>
+</p>
+
+<p>
+  <b>Etiqueta:</b>
+  <%= @registro_alimento.etiqueta %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @registro_alimento.fecha %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @registro_alimento.hora %>
+</p>
+
+
+<%= link_to 'Edit', edit_registro_alimento_path(@registro_alimento) %> |
+<%= link_to 'Back', registro_alimentos_path %>

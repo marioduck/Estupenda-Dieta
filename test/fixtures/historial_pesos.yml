@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  peso_anterior: 1.5
+  peso_actual: 1.5
+  fecha_registro: 2011-05-29
+  bmi: 1
+
+two:
+  peso_anterior: 1.5
+  peso_actual: 1.5
+  fecha_registro: 2011-05-29
+  bmi: 1

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @plan_alimenticio.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @plan_alimenticio.descripcion %>
+</p>
+
+<p>
+  <b>Calorias:</b>
+  <%= @plan_alimenticio.calorias %>
+</p>
+
+<p>
+  <b>Fibras:</b>
+  <%= @plan_alimenticio.fibras %>
+</p>
+
+<p>
+  <b>Azucares:</b>
+  <%= @plan_alimenticio.azucares %>
+</p>
+
+<p>
+  <b>Carbohidratos:</b>
+  <%= @plan_alimenticio.carbohidratos %>
+</p>
+
+<p>
+  <b>Proteinas:</b>
+  <%= @plan_alimenticio.proteinas %>
+</p>
+
+<p>
+  <b>Ingestas:</b>
+  <%= @plan_alimenticio.ingestas %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_alimenticio_path(@plan_alimenticio) %> |
+<%= link_to 'Back', plan_alimenticios_path %>

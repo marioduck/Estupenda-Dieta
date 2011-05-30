@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  calorias: 1
+  fibras: 1
+  azucares: 1
+  carbohidratos: 1
+  proteinas: 1
+  ingestas: 1
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  calorias: 1
+  fibras: 1
+  azucares: 1
+  carbohidratos: 1
+  proteinas: 1
+  ingestas: 1

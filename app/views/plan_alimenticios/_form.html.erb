@@ -1,0 +1,49 @@
+<%= form_for(@plan_alimenticio) do |f| %>
+  <% if @plan_alimenticio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan_alimenticio.errors.count, "error") %> prohibited this plan_alimenticio from being saved:</h2>
+
+      <ul>
+      <% @plan_alimenticio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :calorias %><br />
+    <%= f.text_field :calorias %>
+  </div>
+  <div class="field">
+    <%= f.label :fibras %><br />
+    <%= f.text_field :fibras %>
+  </div>
+  <div class="field">
+    <%= f.label :azucares %><br />
+    <%= f.text_field :azucares %>
+  </div>
+  <div class="field">
+    <%= f.label :carbohidratos %><br />
+    <%= f.text_field :carbohidratos %>
+  </div>
+  <div class="field">
+    <%= f.label :proteinas %><br />
+    <%= f.text_field :proteinas %>
+  </div>
+  <div class="field">
+    <%= f.label :ingestas %><br />
+    <%= f.text_field :ingestas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

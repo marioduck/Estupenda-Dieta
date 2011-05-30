@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre_pila: MyString
+  nombre_ap: MyString
+  nombre_am: MyString
+  email: MyString
+  password: MyString
+  fecha_nacimiento: 2011-05-28
+  sexo: 1
+  direccion_calle: MyString
+  direccion_numero: MyString
+  direccion_colonia: MyString
+  direccion_cp: 1
+  direccion_cuidad: MyString
+  telefono: 1
+  cedula_profesional: MyString
+  institucion: MyString
+
+two:
+  nombre_pila: MyString
+  nombre_ap: MyString
+  nombre_am: MyString
+  email: MyString
+  password: MyString
+  fecha_nacimiento: 2011-05-28
+  sexo: 1
+  direccion_calle: MyString
+  direccion_numero: MyString
+  direccion_colonia: MyString
+  direccion_cp: 1
+  direccion_cuidad: MyString
+  telefono: 1
+  cedula_profesional: MyString
+  institucion: MyString

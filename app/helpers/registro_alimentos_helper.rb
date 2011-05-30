@@ -1,0 +1,2 @@
+module RegistroAlimentosHelper
+end

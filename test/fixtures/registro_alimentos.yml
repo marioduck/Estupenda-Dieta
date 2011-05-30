@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  usuario: 
+  alimento: 
+  etiqueta: 
+  fecha: 2011-05-29
+  hora: 2011-05-29 22:21:55
+
+two:
+  usuario: 
+  alimento: 
+  etiqueta: 
+  fecha: 2011-05-29
+  hora: 2011-05-29 22:21:55

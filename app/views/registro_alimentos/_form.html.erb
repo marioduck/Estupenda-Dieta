@@ -1,0 +1,37 @@
+<%= form_for(@registro_alimento) do |f| %>
+  <% if @registro_alimento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registro_alimento.errors.count, "error") %> prohibited this registro_alimento from being saved:</h2>
+
+      <ul>
+      <% @registro_alimento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :alimento %><br />
+    <%= f.text_field :alimento %>
+  </div>
+  <div class="field">
+    <%= f.label :etiqueta %><br />
+    <%= f.text_field :etiqueta %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :hora %><br />
+    <%= f.time_select :hora %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

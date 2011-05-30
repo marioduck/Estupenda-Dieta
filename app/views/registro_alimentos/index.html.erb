@@ -1,0 +1,31 @@
+<h1>Listing registro_alimentos</h1>
+
+<table>
+  <tr>
+    <th>Usuario</th>
+    <th>Alimento</th>
+    <th>Etiqueta</th>
+    <th>Fecha</th>
+    <th>Hora</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registro_alimentos.each do |registro_alimento| %>
+  <tr>
+    <td><%= registro_alimento.usuario %></td>
+    <td><%= registro_alimento.alimento %></td>
+    <td><%= registro_alimento.etiqueta %></td>
+    <td><%= registro_alimento.fecha %></td>
+    <td><%= registro_alimento.hora %></td>
+    <td><%= link_to 'Show', registro_alimento %></td>
+    <td><%= link_to 'Edit', edit_registro_alimento_path(registro_alimento) %></td>
+    <td><%= link_to 'Destroy', registro_alimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registro alimento', new_registro_alimento_path %>

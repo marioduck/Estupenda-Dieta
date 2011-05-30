@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  calorias: 1.5
+  grasas_saturadas: 1.5
+  grasas_trans: 1.5
+  proteinas: 1.5
+  colesterol: 1.5
+  fibra: 1.5
+  azucares: 1.5
+  potasio: 1.5
+  carbohidratos: 1.5
+  fosforo: 1.5
+  sodio: 1.5
+  calcio: 1.5
+  hierro: 1.5
+  aceites: 1.5
+  vitamina_c: 1.5
+  vitamina_a: 1.5
+  cantidad: 1
+  medida: 
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  calorias: 1.5
+  grasas_saturadas: 1.5
+  grasas_trans: 1.5
+  proteinas: 1.5
+  colesterol: 1.5
+  fibra: 1.5
+  azucares: 1.5
+  potasio: 1.5
+  carbohidratos: 1.5
+  fosforo: 1.5
+  sodio: 1.5
+  calcio: 1.5
+  hierro: 1.5
+  aceites: 1.5
+  vitamina_c: 1.5
+  vitamina_a: 1.5
+  cantidad: 1
+  medida: 

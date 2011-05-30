@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @restaurant.nombre %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @restaurant.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @restaurant.password %>
+</p>
+
+<p>
+  <b>Direccion calle:</b>
+  <%= @restaurant.direccion_calle %>
+</p>
+
+<p>
+  <b>Direccion numero:</b>
+  <%= @restaurant.direccion_numero %>
+</p>
+
+<p>
+  <b>Direccion colonia:</b>
+  <%= @restaurant.direccion_colonia %>
+</p>
+
+<p>
+  <b>Direccion cp:</b>
+  <%= @restaurant.direccion_cp %>
+</p>
+
+<p>
+  <b>Direccion cuidad:</b>
+  <%= @restaurant.direccion_cuidad %>
+</p>
+
+<p>
+  <b>Direccion estado:</b>
+  <%= @restaurant.direccion_estado %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @restaurant.telefono %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%= @restaurant.horario %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

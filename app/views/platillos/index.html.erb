@@ -1,0 +1,57 @@
+<h1>Listing platillos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Calorias</th>
+    <th>Grasas saturadas</th>
+    <th>Grasas trans</th>
+    <th>Proteinas</th>
+    <th>Colesterol</th>
+    <th>Fibra</th>
+    <th>Azucares</th>
+    <th>Potasio</th>
+    <th>Carbohidratos</th>
+    <th>Fosforo</th>
+    <th>Sodio</th>
+    <th>Calcio</th>
+    <th>Hierro</th>
+    <th>Aceites</th>
+    <th>Vitamina c</th>
+    <th>Vitamina a</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @platillos.each do |platillo| %>
+  <tr>
+    <td><%= platillo.nombre %></td>
+    <td><%= platillo.descripcion %></td>
+    <td><%= platillo.calorias %></td>
+    <td><%= platillo.grasas_saturadas %></td>
+    <td><%= platillo.grasas_trans %></td>
+    <td><%= platillo.proteinas %></td>
+    <td><%= platillo.colesterol %></td>
+    <td><%= platillo.fibra %></td>
+    <td><%= platillo.azucares %></td>
+    <td><%= platillo.potasio %></td>
+    <td><%= platillo.carbohidratos %></td>
+    <td><%= platillo.fosforo %></td>
+    <td><%= platillo.sodio %></td>
+    <td><%= platillo.calcio %></td>
+    <td><%= platillo.hierro %></td>
+    <td><%= platillo.aceites %></td>
+    <td><%= platillo.vitamina_c %></td>
+    <td><%= platillo.vitamina_a %></td>
+    <td><%= link_to 'Show', platillo %></td>
+    <td><%= link_to 'Edit', edit_platillo_path(platillo) %></td>
+    <td><%= link_to 'Destroy', platillo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Platillo', new_platillo_path %>
