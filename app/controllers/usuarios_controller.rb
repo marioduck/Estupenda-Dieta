@@ -1,4 +1,7 @@
 class UsuariosController < ApplicationController
+
+  before_filter :authenticate, :only => [:edit, :destroy]
+
   # GET /usuarios
   # GET /usuarios.xml
   def index

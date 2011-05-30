@@ -244,3 +244,44 @@ ActiveRecord::StatementInvalid (Could not find table 'enfermedads_usuarios'):
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (76.4ms)
 Rendered /var/lib/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2011-05-30 03:53:02 -0700
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.2ms)
+
+
+Started GET "/user" for 10.0.2.2 at 2011-05-30 03:53:08 -0700
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/usuarios" for 10.0.2.2 at 2011-05-30 03:53:39 -0700
+  Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (3.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+Rendered usuarios/index.html.erb within layouts/application (131.0ms)
+Completed 200 OK in 932ms (Views: 565.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/1/edit" for 10.0.2.2 at 2011-05-30 03:53:56 -0700
+  Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/usuarios/1/edit" for 10.0.2.2 at 2011-05-30 03:54:02 -0700
+  Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (1.7ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUsuario Load (3.6ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered usuarios/_form.html.erb (71.8ms)
+Rendered usuarios/edit.html.erb within layouts/application (241.9ms)
+Completed 200 OK in 800ms (Views: 673.8ms | ActiveRecord: 5.3ms)
